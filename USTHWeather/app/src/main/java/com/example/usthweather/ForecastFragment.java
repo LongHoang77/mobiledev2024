@@ -1,4 +1,4 @@
-package com.example.firstapp;
+package com.example.usthweather;
 
 import android.os.Bundle;
 
@@ -60,7 +60,7 @@ public class ForecastFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_forecast, container, false);
-        view.setBackgroundColor(0x200080FF);
+        view.setBackgroundColor(0x20FF0000);
         return view;
     }
 }
