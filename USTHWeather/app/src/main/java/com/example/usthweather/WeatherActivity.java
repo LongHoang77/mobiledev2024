@@ -1,13 +1,11 @@
 package com.example.usthweather;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -19,8 +17,10 @@ public class WeatherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG, "onCreate called");
 
+        WeatherFragment weatherFragment = new WeatherFragment();
         ForecastFragment forecastFragment = new ForecastFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.main,forecastFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.main, weatherFragment).commit();
     }
 
     @Override
