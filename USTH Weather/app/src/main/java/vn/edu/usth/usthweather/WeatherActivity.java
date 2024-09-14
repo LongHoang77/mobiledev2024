@@ -15,7 +15,7 @@ public class WeatherActivity extends AppCompatActivity {
     private static final String TAG = "Weather";
     private TabLayout tabLayout;
     private ViewPager2 viewPager2;
-    private AdapterFragment adapterFragment;
+    private HomeFragmentPagerAdapter homeFragmentPagerAdapter;
     private FrameLayout frameLayout;
 
     @Override
@@ -26,8 +26,8 @@ public class WeatherActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.myViewPager);
 
-        adapterFragment = new AdapterFragment(this);
-        viewPager2.setAdapter(adapterFragment);
+        homeFragmentPagerAdapter = new HomeFragmentPagerAdapter(this);
+        viewPager2.setAdapter(homeFragmentPagerAdapter);
         frameLayout = findViewById(R.id.frameLayout);
 
 
@@ -60,30 +60,30 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i(TAG, "onStart called");
+        Log.i(TAG, "On Start");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i(TAG, "onResume called");
+        Log.i(TAG, "On Resume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i(TAG, "onPause called");
+        Log.i(TAG, "On Pause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i(TAG, "onStop called");
+        Log.i(TAG, "On Stop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i(TAG, "onDestroy called");
+        Log.i(TAG, "On Destroy");
     }
 }

@@ -1,16 +1,23 @@
 package vn.edu.usth.usthweather;
 
+import android.annotation.SuppressLint;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -57,34 +64,39 @@ public class ForecastFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_forecast, container, false);
-        view.setBackgroundColor(0x20FF0000);
-
+//        View view = inflater.inflate(R.layout.fragment_forecast, container, false);
+//
+//        view.setBackgroundColor(Color.RED);
+//        return view;
+//        --------------lab4--------------
 //        LinearLayout layout = new LinearLayout(getActivity());
-//        layout.setOrientation(LinearLayout.VERTICAL);
-//        layout.setPadding(20, 20, 20, 20);
-
-        // Day
+//        layout.setOrientation(LinearLayout.VERTICAL); // Set orientation to vertical
+//        layout.setPadding(16, 16, 16, 16);
+//
 //        TextView dayTextView = new TextView(getActivity());
 //        dayTextView.setText("Thursday");
-//        dayTextView.setTextSize(40);
-//        dayTextView.setGravity(Gravity.CENTER_HORIZONTAL);
-//        dayTextView.setPadding(0, 0, 0, 15);
-
-        // Weather icon
-//        ImageView Icon = new ImageView(getActivity());
-//        Icon.setImageResource(R.drawable.cloudy_7803745); // Icon
+//        dayTextView.setTextSize(24);
+//        dayTextView.setPadding(50, 0, 0, 16);
+//
+//
+//
+//        ImageView weatherIcon = new ImageView(getActivity());
+//        weatherIcon.setImageResource(R.drawable.weather);
+//
 //
 //        layout.addView(dayTextView);
-//        layout.addView(Icon);
-
+//        layout.addView(weatherIcon);
 //
+//        return layout;
+//          --------------lab5-------
         return inflater.inflate(R.layout.fragment_forecast, container, false);
     }
 }
