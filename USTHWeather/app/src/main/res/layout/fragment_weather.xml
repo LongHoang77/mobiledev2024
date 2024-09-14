@@ -48,7 +48,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/sun" />
+            android:src="@drawable/cloudy_7803745" />
 
     </RelativeLayout>
 
